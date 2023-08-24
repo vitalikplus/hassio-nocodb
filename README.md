@@ -1,0 +1,1 @@
+Nocodb Home Assistant Addon
