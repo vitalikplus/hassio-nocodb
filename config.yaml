@@ -1,6 +1,6 @@
 name: Nocodb
 description: Nocodb Home Assistant Addon
-version: 1.0.8
+version: 1.0.9
 slug: hassio_nocodb
 init: false
 arch:
@@ -21,3 +21,5 @@ schema:
   beer: bool
   NC_DB: str
   NC_AUTH_JWT_SECRET: str
+
+# learn from https://github.com/alexbelgium/hassio-addons/blob/master/bitwarden/Dockerfile
