@@ -15,9 +15,5 @@ webui:
   http://[HOST]:[PORT:8080]
 options:
   beer: true
-  NC_DB: "pg://db_host:5432?u=user&p=password&d=noco_db"
 schema:
   beer: bool
-  NC_DB: str
-#environment:
-#  NC_DB: "!secret NC_DB"
