@@ -1,6 +1,6 @@
 name: "Nocodb"
 description: "Nocodb Home Assistant Addon"
-version: "1.0.2"
+version: "1.0.4"
 slug: "hassio_nocodb"
 init: false
 arch:
@@ -9,11 +9,19 @@ arch:
 startup: services
 ports:
   8080/tcp: 8023
-map:
-  - "share:rw"
-  - "addons:rw"
-  - "config:rw"
+ports_description:
+  8080/tcp: Web UI port  
+webui:
+  http://[HOST]:[PORT:8080]
+# map:
+#   - "share:rw"
+#   - "addons:rw"
+#   - "config:rw"
+environment: 
+  NC_DB: pg://db_host:5432?u=user&p=password&d=noco_db
+  # NC_AUTH_JWT_SECRET: ""
 options:
   beer: true
 schema:
   beer: bool
+# learn from examples on https://github.com/alexbelgium/hassio-addons/blob/master/immich/Dockerfile  
