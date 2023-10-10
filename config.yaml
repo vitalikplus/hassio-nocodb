@@ -15,5 +15,7 @@ webui:
   http://[HOST]:[PORT:8080]
 options:
   beer: true
+  NC_DB: test
 schema:
   beer: bool
+  NC_DB: str
