@@ -19,3 +19,5 @@ options:
 schema:
   beer: bool
   NC_DB: str
+environment:
+  NC_DB: "!secret NC_DB"

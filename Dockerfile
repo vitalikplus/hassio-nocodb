@@ -1,8 +1,10 @@
 FROM nocodb/nocodb:latest
 
-ENTRYPOINT ["/usr/bin/dumb-init", "--"]
+# Copy the new entrypoint script into the image
+COPY entrypoint.sh /entrypoint.sh
 
-CMD ["/usr/src/appEntry/start.sh"]
+# Set the new entrypoint
+ENTRYPOINT ["/entrypoint.sh"]
 
 ARG BUILD_ARCH
 ARG BUILD_DESCRIPTION
