@@ -1,7 +1,7 @@
-name: "Nocodb"
-description: "Nocodb Home Assistant Addon"
-version: "1.0.6"
-slug: "hassio_nocodb"
+name: Nocodb
+description: Nocodb Home Assistant Addon
+version: 1.0.6
+slug: hassio_nocodb
 init: false
 arch:
   - aarch64
