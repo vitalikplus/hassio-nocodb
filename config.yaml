@@ -1,6 +1,6 @@
 name: "Nocodb"
 description: "Nocodb Home Assistant Addon"
-version: "1.0.5"
+version: "1.0.6"
 slug: "hassio_nocodb"
 init: false
 arch:
@@ -15,7 +15,9 @@ webui:
   http://[HOST]:[PORT:8080]
 options:
   beer: true
-  nc_db: "pg://db_host:5432?u=user&p=password&d=noco_db"
+  NC_DB: "pg://db_host:5432?u=user&p=password&d=noco_db"
 schema:
   beer: bool
-  mc_db: string
+  NC_DB: str
+#environment:
+#  NC_DB: "!secret NC_DB"
