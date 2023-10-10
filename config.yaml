@@ -1,6 +1,6 @@
 name: Nocodb
 description: Nocodb Home Assistant Addon
-version: 1.0.7
+version: 1.0.8
 slug: hassio_nocodb
 init: false
 arch:
@@ -16,8 +16,8 @@ webui:
 options:
   beer: true
   NC_DB: pg://db_host:5432?u=user&p=password&d=noco_db
+  NC_AUTH_JWT_SECRET: put-your-random-uuid-here
 schema:
   beer: bool
   NC_DB: str
-environment:
-  NC_DB: "!secret NC_DB"
+  NC_AUTH_JWT_SECRET: str
